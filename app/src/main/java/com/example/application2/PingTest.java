@@ -59,7 +59,7 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void run() {
                 Log.i(TAG, "run:----" + Thread.currentThread().getName() + "---"+mFileTimeName);
-                RootCommand("ping" + " -c " + mPingCount + " " + mPingIp + " > " + mDirName + mFileTimeName);
+                RootCommand("ping" + " -c " + mPingCount + " " + mPingIp + " > " + mDirName + "/" + mFileTimeName);
                 //RootCommand("ping 127.0.0.1 > " + mDirName + mFileTimeName);
             }
         };
