@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/read_brand"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Read Brand" />
+
+    <Button
+        android:id="@+id/anr_test"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="ANR Test" />
+
+    <Button
+        android:id="@+id/data_traffic"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="data traffic" />
+
+    <Button
+        android:id="@+id/layout_study"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="layout study" />
+
+    <Button
+        android:id="@+id/ping_test"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="ping test" />
+
+</LinearLayout>

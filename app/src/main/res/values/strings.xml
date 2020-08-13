@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android Tset</string>
+    <string name="name">Name</string>
+    <string name="button">Setting</string>
+    <string name="ping_ip">223.6.6.6</string>
+    <string name="ping_count">86400</string>
+    <string name="file_name">ping</string>
+</resources>
