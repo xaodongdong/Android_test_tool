@@ -72,6 +72,27 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:text="SET COUNT" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText3"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:baselineAligned="false"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/ping_interval" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button3"
+            android:layout_toRightOf="@+id/editText4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="interval " />
     </RelativeLayout>
 
     <Switch

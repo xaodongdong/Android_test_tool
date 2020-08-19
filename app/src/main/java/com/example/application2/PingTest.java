@@ -27,10 +27,12 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
     private EditText mFileNameText;
     private EditText mPingIpText;
     private EditText mPingCountText;
+    private EditText mPingIntervalText;
     private Switch mStartSwitch;
     private String mFileName;
     private String mPingIp;
     private String mPingCount; //24h
+    private String mPingInterval; //1s
     private Timer mTimer;
     private TimerTask mTimerTask;
     private boolean mEnd = false;
@@ -46,6 +48,7 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
         mFileName = getResources().getString(R.string.file_name);
         mPingIp = getResources().getString(R.string.ping_ip);
         mPingCount = getResources().getString(R.string.ping_count); //24h
+        mPingInterval = getResources().getString(R.string.ping_interval);
         mButtonInit();
         mEditTextInit();
         mSwtichInit();
@@ -59,7 +62,7 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void run() {
                 Log.i(TAG, "run:----" + Thread.currentThread().getName() + "---"+mFileTimeName);
-                RootCommand("ping" + " -c " + mPingCount + " " + mPingIp + " > " + mDirName + "/" + mFileTimeName);
+                RootCommand("ping" + " -c " + mPingCount + " -i " + mPingInterval + " " + mPingIp + " > " + mDirName + "/" + mFileTimeName);
                 //RootCommand("ping 127.0.0.1 > " + mDirName + mFileTimeName);
             }
         };
@@ -79,6 +82,7 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
         mFileNameText = (EditText) findViewById(R.id.editText1);
         mPingIpText = (EditText) findViewById(R.id.editText2);
         mPingCountText = (EditText) findViewById(R.id.editText3);
+        mPingIntervalText = (EditText) findViewById(R.id.editText4);
     }
 
     void mButtonInit() {
@@ -88,6 +92,8 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
         PingIpButton.setOnClickListener(this);
         Button PingCountButton = (Button) findViewById(R.id.button3);
         PingCountButton.setOnClickListener(this);
+        Button PingInterval = (Button) findViewById(R.id.button4);
+        PingInterval.setOnClickListener(this);
     }
 
     @Override
@@ -104,6 +110,10 @@ public class PingTest extends AppCompatActivity implements View.OnClickListener,
             case R.id.button3:
                 mPingCount = mPingCountText.getText().toString();
                 Toast.makeText(this, "PingCount is " + mPingCount, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.button4:
+                mPingInterval = mPingIntervalText.getText().toString();
+                Toast.makeText(this, "PingInterval is " + mPingInterval, Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
